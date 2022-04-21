@@ -33,6 +33,13 @@ public class Rocket implements GameControlScene {
 	 * 
 	 * With this you can run the game. use WASD to move and SPACE to fire
 	 */
+	
+	public Rocket() {
+		int x = AsteroidsGame.WIDTH / 2;
+		int y = AsteroidsGame.HEIGHT / 2;
+		int size = 10;
+		collisionBox = new Rectangle(x - size / 2, y - size / 2, size, size);
+	}
 
 	/*
 	 * 3. If we want to be able to choose where to place the rocket we can create a
@@ -49,6 +56,13 @@ public class Rocket implements GameControlScene {
 	 * try replacing one of the calls to the constructor with a call to this
 	 * constructor.
 	 */
+	
+	public Rocket(int x, int y) {
+		this.x=x;
+		this.y=y;
+		int size = 10;
+		collisionBox = new Rectangle(x - size / 2, y - size / 2, size, size);
+	}
 
 	@Override
 	public void draw(Graphics g) {
